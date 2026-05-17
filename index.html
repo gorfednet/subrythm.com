@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Subrythm is Adam King &amp; Rob Fines, an electronic music duo and Live PA from Toronto.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#080b10">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Subrythm | Electronic Music Duo | Toronto">
+  <meta property="og:description" content="Subrythm is Adam King &amp; Rob Fines, an electronic music duo and Live PA from Toronto.">
+  <meta property="og:image" content="./assets/images/background.jpg">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subrythm | Electronic Music Duo | Toronto">
+  <meta name="twitter:description" content="Subrythm is Adam King &amp; Rob Fines, an electronic music duo and Live PA from Toronto.">
+  <meta name="twitter:image" content="./assets/images/background.jpg">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Subrythm | Electronic Music Duo | Toronto</title>
+  <link rel="preload" href="./assets/images/background.jpg" as="image">
+  <link rel="canonical" href="https://subrythm.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=20260425-1924">
+</head>
+<body>
+  <main class="app">
+    <div class="bg-layer" aria-hidden="true">
+      <img src="./assets/images/background.jpg" alt="" class="bg-image bg-image--sharp">
+      <div class="bg-blur-wrap">
+        <img src="./assets/images/background.jpg" alt="" class="bg-image bg-image--blur">
+      </div>
+      <div class="bg-gradient"></div>
+      <div class="bg-vignette"></div>
+    </div>
+
+    <div class="content">
+      <section class="hero">
+        <div class="hero__inner">
+          <h1>SUBRYTHM</h1>
+          <p class="hero__tagline">ELECTRONIC MUSIC DUO &amp; LIVE PA</p>
+          <p class="hero__location">TORONTO</p>
+        </div>
+        <a class="scroll-indicator" href="#player" aria-label="Scroll to music player">
+          <span class="scroll-indicator__mouse" aria-hidden="true">
+            <span class="scroll-indicator__wheel"></span>
+          </span>
+          <span class="scroll-indicator__text">Scroll</span>
+        </a>
+      </section>
+      <section id="player" class="player-section" aria-label="Audio player">
+        <div class="player-card">
+          <div class="player-main">
+            <img id="album-art" class="album-art" src="./assets/audio/Subrythm%20-%20Preliminary%20Muse/albumcover.jpg" alt="Album art for Preliminary Muse">
+            <p id="current-track-title" class="current-track-title">01 - Aunt Rhodie</p>
+            <p id="current-album-title" class="current-album-title">Subrythm - Preliminary Muse</p>
+            <div class="controls" role="group" aria-label="Playback controls">
+              <button type="button" id="shuffle-btn" class="icon-btn" aria-label="Shuffle tracks">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <g class="shuffle-on">
+                    <path class="icon-stroke" d="M15 4h5v5"/>
+                    <path class="icon-stroke" d="M20 4l-6.5 6.5"/>
+                    <path class="icon-stroke" d="M4 7h3.5l4.1 4.1"/>
+                    <path class="icon-stroke" d="M15 20h5v-5"/>
+                    <path class="icon-stroke" d="M20 20l-6.5-6.5"/>
+                    <path class="icon-stroke" d="M4 17h3.5l2-2"/>
+                  </g>
+                  <g class="shuffle-off">
+                    <path class="icon-stroke" d="M4 8h12"/>
+                    <path class="icon-stroke" d="M13 5l3 3-3 3"/>
+                    <path class="icon-stroke" d="M4 16h12"/>
+                    <path class="icon-stroke" d="M13 13l3 3-3 3"/>
+                  </g>
+                </svg>
+              </button>
+              <button type="button" id="prev-btn" class="icon-btn" aria-label="Previous track">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M6 5h2v14H6zM19 5v14l-10-7z"/>
+                </svg>
+              </button>
+              <button type="button" id="play-btn" class="icon-btn icon-btn--primary" aria-label="Play">
+                <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path id="play-icon-path" d="M8 5v14l11-7z"/></svg>
+              </button>
+              <button type="button" id="next-btn" class="icon-btn" aria-label="Next track">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M16 5h2v14h-2zM5 5l10 7-10 7z"/>
+                </svg>
+              </button>
+              <button type="button" id="mute-btn" class="icon-btn" aria-label="Mute audio">
+                <svg id="mute-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path id="mute-speaker" d="M3 10v4h4l5 4V6L7 10H3Z"/>
+                  <path id="mute-wave-1" d="M15.5 8.5a5 5 0 0 1 0 7" />
+                  <path id="mute-wave-2" d="M18 6a8.5 8.5 0 0 1 0 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="scrubber-wrap">
+              <span id="current-time" class="time-readout">0:00</span>
+              <label class="sr-only" for="seek-slider">Playback progress</label>
+              <input id="seek-slider" type="range" min="0" max="100" value="0" step="0.1">
+              <span id="total-time" class="time-readout">0:00</span>
+            </div>
+          </div>
+          <div class="legacy-player-fallback" aria-hidden="true">
+            <select id="album-select"></select>
+            <select id="track-select"></select>
+            <p class="now-playing"></p>
+            <input id="volume-slider" type="range" min="0" max="1" value="1" step="0.01">
+          </div>
+          <audio id="audio-player" preload="metadata"></audio>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__inner">
+          <p>&copy; 2026 subrythm.com. <span>All rights reserved.</span></p>
+          <a href="https://www.discogs.com/artist/184623-Subrythm" target="_blank" rel="noopener noreferrer">Discogs</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script src="./player.js?v=20260425-1924" defer></script>
+</body>
+</html>
