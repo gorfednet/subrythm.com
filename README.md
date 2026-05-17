@@ -17,19 +17,14 @@ Live site: [https://subrythm.com/](https://subrythm.com/)
 ```
 .
 ├── index.html          # Page shell and player markup
-├── styles.css          # Active stylesheet (cache-busted in HTML)
+├── styles.css          # Stylesheet (cache-busted in HTML)
 ├── player.js           # Album catalog, playback, and UI logic
-├── script.js           # Small shared utilities (e.g. footer year)
 ├── assets/
 │   ├── audio/          # MP3 releases and album art
-│   └── images/         # Background, hero, live photos
-├── styles.v*.css       # Archived stylesheet iterations
-├── player.v*.js        # Archived player iterations
+│   └── images/         # Site background image
 ├── Makefile            # Deploy via rsync to mounted web root
 └── deploy-marker.txt   # UTC timestamp written on last deploy
 ```
-
-Active assets are referenced from `index.html` with cache-busting query strings. Versioned `*.v*.css` and `*.v*.js` files are kept as design/implementation history.
 
 ## Local preview
 
