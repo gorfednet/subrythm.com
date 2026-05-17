@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# SMB / network share artifacts
+.smbdelete*
+**/.smbdelete*
+
+# Editor & local tooling
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs
+*.log
