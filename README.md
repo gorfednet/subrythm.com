@@ -23,6 +23,10 @@ Live site: [https://subrythm.com/](https://subrythm.com/)
 │   ├── audio/          # MP3 releases and album art
 │   └── images/         # Site background image
 ├── Makefile            # Deploy via rsync to mounted web root
+├── favicon.svg         # Master favicon (waveform mark)
+├── site.webmanifest    # PWA icon manifest
+├── scripts/
+│   └── generate-icons.py  # Regenerate PNG/ICO from favicon.svg design
 └── deploy-marker.txt   # UTC timestamp written on last deploy
 ```
 
@@ -51,6 +55,21 @@ make deploy TARGET=/path/to/web/root/
 ```
 
 Ensure the target volume is mounted before deploying. `deploy-marker.txt` records the last deploy time in the project root.
+
+## Favicons
+
+The site uses a cyan waveform mark on `#080b10`, matching the player accent and `theme-color`.
+
+- **Source:** `favicon.svg` (vector master) and `safari-pinned-tab.svg` (Safari pinned tab)
+- **Generated:** `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`
+
+Regenerate raster icons after editing the SVG design:
+
+```bash
+make icons
+```
+
+Requires Python 3 with [Pillow](https://pypi.org/project/pillow/) installed.
 
 ## Releases in the player
 

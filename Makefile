@@ -1,7 +1,10 @@
 SOURCE ?= $(CURDIR)/
 TARGET ?= /Volumes/data/websites/subrythm.com/
 
-.PHONY: deploy
+.PHONY: deploy icons
+icons:
+	python3 scripts/generate-icons.py
+
 deploy:
 	@test -d "$(TARGET)" || (echo "Deploy target not found: $(TARGET)"; exit 1)
 	rsync -av --delete \
