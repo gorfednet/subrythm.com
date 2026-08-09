@@ -1,0 +1,5 @@
+NAS_SSH_USER=dev
+NAS_SSH_HOST=gorfednas
+NAS_SSH_PORT=22
+NAS_REMOTE_BASE=/volume1/data/websites
+NAS_SITE_DIR=subrythm.com

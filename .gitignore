@@ -9,6 +9,7 @@
 **/.smbdelete*
 
 # Editor & local tooling
+.deploy-env
 .idea/
 .vscode/
 *.swp
