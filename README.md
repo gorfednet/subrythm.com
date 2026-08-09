@@ -42,19 +42,21 @@ Open [http://localhost:8080/](http://localhost:8080/).
 
 ## Deploy
 
-The site is deployed by rsync to a mounted web volume (default: `/Volumes/data/websites/subrythm.com/`).
+The site is deployed by rsync to the configured NAS over SSH.
 
 ```bash
 make deploy
 ```
 
-Override paths when needed:
+Override NAS settings when needed:
 
 ```bash
-make deploy TARGET=/path/to/web/root/
+cp .deploy-env.example .deploy-env
+# Edit .deploy-env, then:
+make deploy
 ```
 
-Ensure the target volume is mounted before deploying. `deploy-marker.txt` records the last deploy time in the project root.
+The deploy runs an SSH write preflight first. `deploy-marker.txt` records the last deploy time in the project root.
 
 ## Favicons
 
